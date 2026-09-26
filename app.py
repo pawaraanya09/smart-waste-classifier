@@ -118,11 +118,7 @@ AI-Powered Waste Classification
 st.write(
     "Upload an image of waste and the AI model "
     "will predict its category."
-    <p style="text-align:center;
-    color:#455a64;
-    font-size:20px;">
-    Upload an image of waste and the AI model will predict its category.
-    </p>
+    
 )
 
 # =========================
