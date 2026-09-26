@@ -3,6 +3,67 @@ import numpy as np
 from PIL import Image
 from tensorflow.keras.models import load_model
 
+import streamlit as st
+
+st.set_page_config(
+    page_title=“Smart Waste Classifier”,
+    page_icon=“♻️”,
+    layout=“wide”
+)
+st.markdown(“””
+<style>
+
+body {
+    background-color: #F1F8F4;
+}
+
+/* Main heading */
+.main-title {
+    font-size: 45px;
+    font-weight: 800;
+    color: #087F5B;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* Subtitle */
+.subtitle {
+    text-align: center;
+    color: #52796F;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+/* Upload card */
+.upload-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.08);
+    border: 2px solid #D8F3DC;
+}
+
+/* Result card */
+.result-card {
+    background: #E9FBEF;
+    padding: 25px;
+    border-radius: 20px;
+    border-left: 8px solid #2D6A4F;
+    margin-top: 25px;
+}
+
+/* Info cards */
+.info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.07);
+}
+
+</style>
+“””, unsafe_allow_html=True)
+
 # =========================
 # PAGE SETTINGS
 # =========================
