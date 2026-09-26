@@ -104,12 +104,12 @@ recycling_info = {
 # =========================
 st.markdown("""
 <h1 style="text-align:center;
-color:#013220;
+color:#087f5b;
 font-size:45px;">
 ♻️ Smart Waste Classifier
 </h1>
 <p style="text-align:center;
-color:#06402B;
+color:#455a64;
 font-size:20px;">
 AI-Powered Waste Classification
 </p>
