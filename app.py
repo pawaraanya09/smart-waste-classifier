@@ -3,7 +3,8 @@ import numpy as np
 
 from PIL import Image
 from tensorflow.keras.models import load_model
-
+import gdown
+import os
 
 # =====================================
 # PAGE SETTINGS
@@ -19,14 +20,22 @@ st.set_page_config(
 # =====================================
 # LOAD TRAINED MODEL
 # =====================================
-
 @st.cache_resource
 def load_waste_model():
-    return load_model("model/waste_classifier.keras")
+    model_path = "model/waste_classifier.keras"
 
+    os.makedirs("model", exist_ok=True)
+
+    if not os.path.exists(model_path):
+        gdown.download(
+            id="1_O-l1dZNbD4QZub2-i6hjqGMv3lv6qZS",
+            output=model_path,
+            quiet=False
+        )
+
+    return load_model(model_path)
 
 model = load_waste_model()
-
 
 # =====================================
 # CLASS NAMES
