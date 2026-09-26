@@ -5,6 +5,7 @@ from PIL import Image
 from tensorflow.keras.models import load_model
 import gdown
 import os
+from io import BytesIO
 
 # =====================================
 # PAGE SETTINGS
@@ -73,8 +74,6 @@ uploaded_file = st.file_uploader(
 )
 
 
-image = Image.open(uploaded_file).convert("RGB")
-
 # Resize image
 image = image.resize((128, 128))
 
@@ -97,7 +96,7 @@ prediction = model.predict(image_array)
 if uploaded_file is not None:
 
     # Open image
-    image = Image.open(uploaded_file).convert("RGB")
+    image = Image.open(BytesIO(uploaded_file.getvalue())).convert("RGB")
 
     # Show image
     st.image(
