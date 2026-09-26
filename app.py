@@ -64,16 +64,6 @@ st.write(
 )
 
 
-# =====================================
-# IMAGE UPLOAD
-# =====================================
-
-uploaded_file = st.file_uploader(
-    "📷 Upload Waste Image",
-    type=["jpg", "jpeg", "png"]
-)
-
-
 # IMAGE UPLOAD
 uploaded_file = st.file_uploader(
     "Upload Waste Image",
