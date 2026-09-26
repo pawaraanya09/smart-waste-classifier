@@ -6,6 +6,20 @@ from tensorflow.keras.models import load_model
 import streamlit as st
 st.markdown("""
 <style>
+/* Make all text black */
+.stApp, .stApp p, .stApp h1, .stApp h2,
+.stApp h3, .stApp label, .stMarkdown {
+    color: #000000 !important;
+}
+
+/* Upload section text */
+[data-testid="stFileUploader"] {
+    color: #000000 !important;
+}
+</style>
+""", unsafe_allow_html=True)
+st.markdown("""
+<style>
 .stApp {
     background: linear-gradient(
         #d7ffb7
