@@ -122,6 +122,7 @@ AI-Powered Waste Classification
 # =========================
 uploaded_file = st.file_uploader(
     "Upload Waste Image",
+    color:#455a64
     type=["jpg", "jpeg", "png"]
 )
 st.markdown("""
