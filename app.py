@@ -77,6 +77,25 @@ uploaded_file = st.file_uploader(
 # Resize image
 image = image.resize((128, 128))
 
+if uploaded_file is not None:
+    image = Image.open(
+        BytesIO(uploaded_file.getvalue())
+    ).convert("RGB")
+
+    st.image(image, caption="Uploaded Waste Image")
+
+    image = image.resize((128, 128))
+
+    image_array = np.array(image) / 255.0
+    image_array = np.expand_dims(image_array, axis=0)
+
+    prediction = model.predict(image_array)
+
+    predicted_index = np.argmax(prediction[0])
+    predicted_class = class_names[predicted_index]
+
+    st.success(f"Predicted Category: {predicted_class}")
+
 # Convert image to NumPy array
 image_array = np.array(image)
 
