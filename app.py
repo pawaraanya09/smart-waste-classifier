@@ -37,41 +37,47 @@ class_names = [
 # RECYCLING INFORMATION
 # =========================
 recycling_info = {
+
     "cardboard": {
         "title": "Cardboard Waste",
-        "method": "Boxes ko flatten karo aur saaf aur sukha rakho.",
-        "bin": "Dry waste bin",
-        "tip": "Boxes ko dobara use kar sakte ho."
+        "method": "Flatten the boxes and keep them clean and dry.",
+        "bin": "Dry Waste Bin",
+        "tip": "You can reuse cardboard boxes before recycling them."
     },
+
     "glass": {
         "title": "Glass Waste",
-        "method": "Glass bottles aur jars ko alag collect karo.",
-        "bin": "Glass recycling collection",
-        "tip": "Broken glass ko carefully handle karo."
+        "method": "Collect glass bottles and jars separately for recycling.",
+        "bin": "Glass Recycling Collection",
+        "tip": "Handle broken glass carefully and keep it separate from other waste."
     },
+
     "metal": {
         "title": "Metal Waste",
-        "method": "Metal cans ko saaf karke recycling ke liye alag rakho.",
-        "bin": "Dry waste bin",
-        "tip": "Metal containers ko reuse bhi kar sakte ho."
+        "method": "Clean metal cans and keep them separate for recycling.",
+        "bin": "Dry Waste Bin",
+        "tip": "Metal containers can also be reused before recycling."
     },
+
     "paper": {
         "title": "Paper Waste",
-        "method": "Paper ko saaf aur sukha rakho aur recycling ke liye bhejo.",
-        "bin": "Dry waste bin",
-        "tip": "Paper ko recycle karne se pehle reuse karo."
+        "method": "Keep paper clean and dry and send it for recycling.",
+        "bin": "Dry Waste Bin",
+        "tip": "Reuse paper whenever possible before recycling it."
     },
+
     "plastic": {
         "title": "Plastic Waste",
-        "method": "Plastic ko saaf aur sukha karke recyclable plastic alag rakho.",
-        "bin": "Dry waste bin",
-        "tip": "Single-use plastic ka use kam karo."
+        "method": "Clean and separate recyclable plastic items before disposal.",
+        "bin": "Dry Waste Bin",
+        "tip": "Reduce the use of single-use plastics and choose reusable alternatives."
     },
+
     "trash": {
         "title": "General Waste",
-        "method": "Waste ko local waste collection rules ke according dispose karo.",
-        "bin": "General waste bin",
-        "tip": "Recyclable items ko general waste se alag rakho."
+        "method": "Dispose of general waste according to your local waste collection guidelines.",
+        "bin": "General Waste Bin",
+        "tip": "Keep recyclable items separate from general waste."
     }
 }
 
