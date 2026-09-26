@@ -4,6 +4,15 @@ from PIL import Image
 from tensorflow.keras.models import load_model
 
 import streamlit as st
+st.markdown("""
+<style>
+.stApp {
+    background: linear-gradient(
+        135deg, #e0f7fa, #e8f5e9, #ede7f6
+    );
+}
+</style>
+""", unsafe_allow_html=True)
 
 st.set_page_config(
     page_title="Smart Waste Classifier",
