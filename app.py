@@ -102,7 +102,18 @@ recycling_info = {
 # =========================
 # WEBSITE TITLE
 # =========================
-st.title("♻️ Smart Waste Classifier")
+st.markdown("""
+<h1 style="text-align:center;
+color:#087f5b;
+font-size:45px;">
+♻️ Smart Waste Classifier
+</h1>
+<p style="text-align:center;
+color:#455a64;
+font-size:20px;">
+AI-Powered Waste Classification
+</p>
+""", unsafe_allow_html=True)
 
 st.write(
     "Upload an image of waste and the AI model "
