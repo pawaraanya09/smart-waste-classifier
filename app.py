@@ -109,8 +109,8 @@ font-size:45px;">
 ♻️ Smart Waste Classifier
 </h1>
 <p style="text-align:center;
-color:#455a64;
-font-size:20px;">
+color:#000000 ;
+font-size:25px;">
 AI-Powered Waste Classification
 </p>
 """, unsafe_allow_html=True)
