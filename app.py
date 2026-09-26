@@ -183,6 +183,22 @@ if uploaded_file is not None:
     st.write(f"{confidence:.2f}%")
     st.progress(min(confidence / 100, 1.0))
 
+    st.markdown("""
+   <div style="
+    background:linear-gradient(135deg,#dcedc8,#b2dfdb);
+    padding:20px;
+    border-radius:15px;
+    border-left:6px solid #2e7d32;
+    ">
+    <h3 style="color:#1b5e20;">
+    🌱 AI Prediction Result
+    </h3>
+    <p style="color:#37474f;">
+    Your waste category will appear here.
+    </p>
+    </div>
+""", unsafe_allow_html=True)
+
     # =========================
     # CATEGORY PERCENTAGES
     # =========================
