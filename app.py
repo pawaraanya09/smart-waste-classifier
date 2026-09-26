@@ -8,7 +8,7 @@ st.markdown("""
 <style>
 .stApp {
     background: linear-gradient(
-        #98FF98
+        #F6ECD7
     );
 }
 </style>
@@ -104,7 +104,7 @@ recycling_info = {
 # =========================
 st.markdown("""
 <h1 style="text-align:center;
-color:#087f5b;
+color:#98FB98b;
 font-size:45px;">
 ♻️ Smart Waste Classifier
 </h1>
