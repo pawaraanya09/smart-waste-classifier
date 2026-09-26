@@ -109,8 +109,8 @@ font-size:45px;">
 ♻️ Smart Waste Classifier
 </h1>
 <p style="text-align:center;
-color:#000000 ;
-font-size:25px;">
+color:#455a64;
+font-size:20px;">
 AI-Powered Waste Classification
 </p>
 """, unsafe_allow_html=True)
@@ -118,6 +118,11 @@ AI-Powered Waste Classification
 st.write(
     "Upload an image of waste and the AI model "
     "will predict its category."
+    <p style="text-align:center;
+    color:#455a64;
+    font-size:20px;">
+    Upload an image of waste and the AI model will predict its category.
+    </p>
 )
 
 # =========================
