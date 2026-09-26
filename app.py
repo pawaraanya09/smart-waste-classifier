@@ -127,6 +127,15 @@ uploaded_file = st.file_uploader(
     "Upload Waste Image",
     type=["jpg", "jpeg", "png"]
 )
+st.markdown("""
+<h3 style="color:#1565c0;">
+📸 Upload Your Waste Image
+</h3>
+<p style="color:#546e7a;">
+Upload an image and let AI identify its category.
+</p>
+""", unsafe_allow_html=True)
+
 
 # =========================
 # PREDICTION
