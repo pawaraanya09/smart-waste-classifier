@@ -116,12 +116,17 @@ AI-Powered Waste Classification
 </p>
 """, unsafe_allow_html=True)
 
+st.write(
+    "Upload an image of waste and the AI model "
+    "will predict its category."
+    
+)
 
 # =========================
 # IMAGE UPLOAD
 # =========================
 uploaded_file = st.file_uploader(
-
+    "Upload Waste Image",
     type=["jpg", "jpeg", "png"]
 )
 st.markdown("""
