@@ -98,3 +98,17 @@ if uploaded_file is not None:
 
     # Show result
     st.success(f"Predicted category: {predicted_class}")
+
+    confidence = float(np.max(prediction[0])) * 100
+    st.write(f"Confidence: {confidence:.2f}%")
+
+    details = {
+            "plastic": "Plastic waste - Recycle it.",
+            "paper": "Paper waste - Recycle it.",
+            "metal": "Metal waste - Send it for recycling.",
+            "glass": "Glass waste - Recycle it safely.",
+            "cardboard": "Cardboard waste - Recycle it.",
+            "trash": "General waste - Dispose of it properly."
+        }
+
+    st.info(details.get(predicted_class.lower(), "No extra details available."))
