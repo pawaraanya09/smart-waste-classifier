@@ -3,7 +3,148 @@ import numpy as np
 from PIL import Image
 from tensorflow.keras.models import load_model
 
-import streamlit as st
+# ==============================
+# PAGE CONFIGURATION
+# ==============================
+
+st.set_page_config(
+    page_title="EcoVision AI",
+    page_icon="♻️",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
+
+# ==============================
+# CUSTOM CSS
+# ==============================
+
+st.markdown("""
+<style>
+
+.upload-card {
+    background: rgba(255,255,255,0.82);
+    border: 2px dashed #22C55E;
+    border-radius: 24px;
+    padding: 35px;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+}
+
+.upload-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.upload-heading {
+    font-size: 25px;
+    font-weight: 750;
+    color: #14532D;
+}
+
+.upload-description {
+    color: #64748B;
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+.navbar {
+    background: rgba(255,255,255,0.80);
+    padding: 18px 30px;
+    border-radius: 18px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #14532D;
+}
+
+.nav-text {
+    text-align: right;
+    color: #52606D;
+    font-size: 15px;
+}
+
+.hero {
+    text-align: center;
+    padding: 30px 10px 45px 10px;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: #DCFCE7;
+    color: #166534;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hero-title {
+    font-size: 52px;
+    font-weight: 800;
+    color: #14532D;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: #64748B;
+    max-width: 700px;
+    margin: auto;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+
+# ==============================
+# NAVBAR
+# ==============================
+
+col1, col2 = st.columns([1, 2])
+
+with col1:
+    st.markdown(
+        '<div class="logo">♻️ EcoVision AI</div>',
+        unsafe_allow_html=True
+    )
+
+with col2:
+    st.markdown(
+        '<div class="nav-text">Home &nbsp;&nbsp; | &nbsp;&nbsp; About &nbsp;&nbsp; | &nbsp;&nbsp; How It Works</div>',
+        unsafe_allow_html=True
+    )
+
+
+# ==============================
+# HERO SECTION
+# ==============================
+
+st.markdown("""
+<div class="hero">
+
+<div class="hero-badge">
+🤖 AI Powered Waste Classification
+</div>
+
+<div class="hero-title">
+Smart Waste Classification
+</div>
+
+<div class="hero-description">
+Upload an image of waste and let our deep learning model
+identify its category in seconds.
+</div>
+
+</div>
+""", unsafe_allow_html=True)
 
 st.markdown("""
 <style>
@@ -121,6 +262,15 @@ st.write(
     "will predict its category."
     
 )
+st.markdown("""
+<div class="upload-card">
+    <div class="upload-icon">📷</div>
+    <div class="upload-heading">Upload Your Waste Image</div>
+    <div class="upload-description">
+        Choose a clear image of cardboard, glass, metal, paper, plastic or trash.
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
 # =========================
 # IMAGE UPLOAD
